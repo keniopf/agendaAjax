@@ -25,46 +25,7 @@ function buscaDados(){
 	ajax.send(null);
 }
 
-    // var btn = document.getElementById('insereDados');
-
-	// btn.addEventListener('click', function() {
-	// btn.setAttribute('disabled', 'true');
-
-	// var nome = document.getElementById("insereNome").value;
-	// var servico = document.getElementById("insereServico").value;
-	// var telefone = document.getElementById("insereTelefone").value;
-	// var email = document.getElementById("insereEmail").value;
-	// var data = document.getElementById("data").value;
-
-	// var resposta = document.getElementById("resposta");
-
- 
-	// var ajax = new XMLHttpRequest();
-
-	// resposta.innerHTML = '<img src="loading.gif" width="100px">';
-
-	// ajax.open("GET", "processa.php?nome="+nome+"&servico="+servico+"&telefone="+telefone+"&email="+email+"&data="+data, true);
-
-	// ajax.onreadystatechange = function(){
-	// 	if(ajax.readyState == 4){
-	// 		if(ajax.status == 200){
-	// 			resposta.innerHTML = ajax.responseText;
-	// 		}
-	// 		else{
-	// 			resposta.innerHTML = "Houve um erro na conexão AJAX: " + ajax.statusText;
-	// 		}
-	// 	}
-	// };
-
-	
-
-	// ajax.send(null);
-
-	// });
-
-
-
-
+    
 function insereDados(){
 	var nome = document.getElementById("insereNome").value;
 	var servico = document.getElementById("insereServico").value;
