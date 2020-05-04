@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Agendamento 2º Ofício</title>
+	<meta charset="utf-8">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<!-- JavaScript -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	<script src="ajax.js"></script>
+
+</head>
+<body>
+
+	<div class="container">
+
+		<h1 class="text-center mt-5 ">Agendamento 2º Ofício </h1>
+
+		<div class="container alert alert-success text-center mt-5" role="alert">
+			Antenção devido a ameaça referente ao <b>Vírus COVID-19</b> estamos agendando atendimentos.
+			</br> Todos atendimentos serão agendados para o<b> próximo dia útil</b>, entre <b>9:00 e
+			17:00</b> horas. Após agendar aguarde o contato de nossos funcionários.</br>
+	Para agendar o serviço de <b>Firma/Autenticação</b> ligar para <b>3298-3300</b> </br></br>
+		</div>
+		<div class="container alert alert-danger text-center" role="alert">
+		   As Segundas Vias de Certidão de  <b>Nascimento, Casamento, Óbito e Natimorto </b> 
+		   serão expedidas somente pelo site </br> <a href="https://registrocivil.org.br/" target="_blank"><b>>>>>www.registrocivil.org.br<<<<</b></a>
+		</div>
+		<!-- <button class="btn btn-success btn-block" data-toggle="modal" data-target="#inserirAluno">Novo Agendamento</button> -->
+
+		<hr>
+
+		<div id="pesquisa">
+			<div class="input-group">
+
+				<input type="text" name="buscanome" id="buscanome" placeholder="Digite um nome" class="form-control">
+
+				<div class="input-group-append">
+					<input type="button" name="btnPesquisa" value="Buscar" class="btn btn-info" onclick="buscaDados();">
+				</div>
+			</div>
+		</div>
+
+		<button class="btn btn-success btn-block mt-3" data-toggle="modal" data-target="#inserirAluno">Novo Agendamento</button>
+
+		<hr>
+
+		<div id="dados"></div>
+	</div>
+
+<!-- Modal -->
+<div class="modal fade" id="inserirAluno" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Inserir aluno</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+		  <form id="formID">
+        	<input type="text" class="form-control" placeholder="Nome" name="insereNome" id="insereNome">
+        	<br>
+			<!-- <input type="text" class="form-control" placeholder="Serviço" name="insereServico" id="insereEndereco"> -->
+			
+			<select  class="form-control" placeholder="Serviço" name="insereServico" id="insereServico">
+				<option value="" selected=>Selecione um serviço</option>
+				<option value="Escritura">Escritura</option>
+				<option value="Procuraçao">Procuraçao</option>
+				<option value="Registro Civil">Registro Civil</option>
+				<option value="Protesto">Protesto</option>
+				<option value="Apostilamento">Apostilamento</option>
+				<!--<option value="Firma">Firma</option>-->
+				<option value="Títulos e Documentos">Títulos e Documentos</option>
+				<option value="Títulos e Documentos">Testamento</option>
+				<option value="Títulos e Documentos">Casamento</option>
+				<option value="Títulos e Documentos">União Estável</option>
+				<option value="Títulos e Documentos">Divórcio</option>
+				
+				
+
+			</select>
+
+        	<br>
+        	<input type="text" class="form-control" placeholder="Telefone" name="insereTelefone" id="insereTelefone">
+        	<br>
+        	<input type="text" class="form-control" placeholder="E-mail" name="insereEmail" id="insereEmail">
+			<br>
+			<input class="form-control" type="date" name="data" id="data">
+			<br>
+           
+			<div id="resposta"></div>
+		</form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        <button type="submit" class="btn btn-primary" id="insereDados" onclick="insereDados();">Salvar mudanças</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
