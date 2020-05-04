@@ -92,20 +92,27 @@ function insereDados(){
 		}
 	};
 
-	// var btn = document.getElementById('insereDados');
+	 document.getElementById('insereDados').disabled = true;
 
+	 setTimeout(function() {
+		window.location.href = "index.html";
+	}, 6000);
+
+	
+	 //CÓDIGO HENRIQUE
 	// btn.addEventListener('click', function () {
 	// btn.setAttribute('disabled', 'true');
 	// });
 
-	var formID = document.getElementById("formID");
-	var send = $("#insereDados");
+	//CÒDIGO RICARDO
+	// var formID = document.getElementById("formID");
+	// var send = $("#insereDados");
 	
-	$(formID).submit(function(event){
-	  if (formID.checkValidity()) {
-		send.attr('disabled', 'disabled');
-	  }
-	});
+	// $(formID).submit(function(event){
+	//   if (formID.checkValidity()) {
+	// 	send.attr('disabled', 'disabled');
+	//   }
+	// });
 
 	ajax.send(null);
 
