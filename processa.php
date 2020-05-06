@@ -14,7 +14,7 @@ $conexao = new mysqli($servidor, $usuario, $senha, $base) or die("Erro na conex�
 // $senha = 'Shakkahou-23';
 // $base = 'webcartoriosobradinho';
 
-// $conexao = new mysqli($servidor, $usuario, $senha, $base) or die("Erro na conexão");
+$conexao = new mysqli($servidor, $usuario, $senha, $base) or die("Erro na conexão");
 
  //Formatar data
  function data($data){
@@ -27,7 +27,7 @@ if(isset($_GET['buscanome'])){
 	$nome = $_GET['buscanome'];
 	
 	if(empty($nome)){
-		$query = "SELECT * FROM clientes WHERE  MONTH(data) = MONTH(CURDATE()) AND YEAR(data) = YEAR(CURDATE()) ORDER BY data " ;
+		$query = "SELECT * FROM clientes WHERE DAY(data) = DAY(CURDATE()) AND  MONTH(data) = MONTH(CURDATE()) AND YEAR(data) = YEAR(CURDATE()) ORDER BY data " ;
 	}
 	else{
 		$query = "SELECT * FROM clientes WHERE NOME LIKE '%$nome%' ORDER BY data";

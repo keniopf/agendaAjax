@@ -55,9 +55,9 @@ function insereDados(){
 
 	 document.getElementById('insereDados').disabled = true;
 
-	 setTimeout(function() {
-		window.location.href = "index.html";
-	}, 6000);
+	//  setTimeout(function() {
+	// 	window.location.href = "index.html";
+	// }, 6000);
 
 	
 	 //CÓDIGO HENRIQUE
